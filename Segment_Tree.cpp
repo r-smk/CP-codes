@@ -93,7 +93,6 @@ public:
 		else{
 			update(2 * si + 2, mid + 1, se, idx, val);
 		}
-
 		// Updating the current value of the node after updating the childs.
 		segTree[si] = segTree[2 * si + 1] + segTree[2 * si + 2];
 	}
