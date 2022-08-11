@@ -1,12 +1,11 @@
 class ST{
 public:
 	vector<int> segTree, lazy;
-
+	
 	ST(int size){
 		segTree.resize(4 * size);
 		lazy.resize(4 * size);
 	}
-
 	void build(int arr[], int si, int ss, int se){
 		if(ss == se){
 			segTree[si] = arr[ss];
@@ -71,7 +70,6 @@ public:
 			}
 			return;
 		}
-
 		// No Overlap
 		// Just return the left and right
 		int mid = ss + (se - ss) / 2;
